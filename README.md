@@ -6,7 +6,7 @@ API REST desarrollada en Laravel para la gestión de items.
 
 -   PHP >= 8.1
 -   Composer
--   MySQL
+-   MySQL - MAMP - PHPMYADMIN
 -   Node.js y npm
 
 \## Instalación
