@@ -13,12 +13,13 @@ class Item extends Model
     protected $fillable = [
         'title',
         'description',
-        'image_url',
+        'price',
         'active'
     ];
 
     protected $casts = [
         'active' => 'boolean',
+        'price' => 'decimal:2',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime'

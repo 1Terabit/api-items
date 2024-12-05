@@ -18,9 +18,9 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|max:255',
+            'title' => 'required|string|max:255',
             'description' => 'required',
-            'image_url' => 'nullable|url'
+            'price' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
@@ -38,10 +38,12 @@ class ItemController extends Controller
 
     public function update(Request $request, Item $item)
     {
+        \Log::info('Datos recibidos:', $request->all()); 
+
         $validator = Validator::make($request->all(), [
-            'title' => 'required|max:255',
+            'title' => 'required|string|max:255',
             'description' => 'required',
-            'image_url' => 'nullable|url'
+            'price' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
